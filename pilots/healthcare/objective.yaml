@@ -1,0 +1,13 @@
+sector: healthcare
+objective: >
+  Ingest patient encounter CDC events, mask PHI columns, load to curated
+  zone for real-time load forecasting.
+template_id: cdc_ingestion
+metadata:
+  source_connection: ehr_primary
+  target_dataset: curated.encounters
+  primary_key: [encounter_id]
+  pii_columns: [patient_name, mrn, dob]
+rule_packs:
+  - hipaa
+  - fisma

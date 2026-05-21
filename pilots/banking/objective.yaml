@@ -1,0 +1,12 @@
+sector: banking
+objective: >
+  Ingest transaction CDC stream with fraud-detection hooks and SOX audit lineage.
+template_id: cdc_ingestion
+metadata:
+  source_connection: core_banking
+  target_dataset: curated.transactions
+  primary_key: [transaction_id]
+  pii_columns: []
+rule_packs:
+  - sox
+  - fisma
