@@ -1,0 +1,9 @@
+id: sox.audit_trail
+pack: sox
+severity: medium
+description: Generated artifacts must include audit metadata for financial data lineage.
+check:
+  type: metadata_required
+  keys:
+    - audit_trail
+    - lineage_id

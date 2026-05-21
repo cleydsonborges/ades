@@ -1,0 +1,11 @@
+id: hipaa.phi_masking
+pack: hipaa
+severity: high
+description: PII columns referenced in pipeline must declare masking in generated SQL.
+check:
+  type: artifact_contains
+  path: source_files
+  file_suffix: .sql
+  required_substrings:
+    - mask
+    - hash

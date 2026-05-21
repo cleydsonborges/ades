@@ -1,0 +1,9 @@
+id: fisma.access_control
+pack: fisma
+severity: high
+description: Pipeline metadata must declare environment and access tier for federal workloads.
+check:
+  type: metadata_required
+  keys:
+    - environment
+    - access_tier
